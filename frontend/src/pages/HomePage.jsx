@@ -49,7 +49,7 @@ function HomePage() {
           <div className="text-ceter text-primary py-10">Loading notes...</div>
         )}
 
-        {notes.length === 0 && !rateLimited && <NotesNotFound />}
+        {!loading && notes.length === 0 && !rateLimited && <NotesNotFound />}
         
         {notes.length > 0 && !rateLimited && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
